@@ -1,0 +1,102 @@
+{
+  "name": "nest-typescript-starter",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Nest TypeScript starter repository",
+  "license": "MIT",
+  "scripts": {
+    "build": "nest build",
+    "format": "prettier --write \"apps/**/*.ts\" \"libs/**/*.ts\"",
+    "start": "nest start",
+    "start:dev": "nest start --watch",
+    "start:debug": "nest start --debug --watch",
+    "start:prod": "node dist/main",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage",
+    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
+    "test:e2e": "jest --config ./apps/nest-typescript-starter/test/jest-e2e.json"
+  },
+  "dependencies": {
+    "@nestjs/cache-manager": "^1.0.0",
+    "@nestjs/common": "^9.4.2",
+    "@nestjs/config": "^2.3.2",
+    "@nestjs/core": "^9.4.2",
+    "@nestjs/jwt": "^10.0.3",
+    "@nestjs/microservices": "^9.4.2",
+    "@nestjs/mongoose": "^9.2.2",
+    "@nestjs/passport": "^9.0.3",
+    "@nestjs/platform-express": "^9.4.2",
+    "@nestjs/swagger": "^6.3.0",
+    "@types/cache-manager": "^4.0.2",
+    "@types/multer-gridfs-storage": "^4.0.5",
+    "amqp-connection-manager": "^4.1.13",
+    "amqplib": "^0.10.3",
+    "bcrypt": "^5.1.0",
+    "cache-manager": "^5.2.2",
+    "cache-manager-redis-store": "^3.0.1",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.0",
+    "crypto": "^1.0.1",
+    "fluent-ffmpeg": "^2.1.2",
+    "mongo-gridfs": "^1.1.0",
+    "mongodb": "^4.16.0",
+    "mongoose": "^6.11.2",
+    "multer": "^1.4.5-lts.1",
+    "multer-gridfs-storage": "^5.0.2",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.5.5"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^9.0.0",
+    "@nestjs/schematics": "^9.0.0",
+    "@nestjs/testing": "^9.4.2",
+    "@types/bcrypt": "^5.0.0",
+    "@types/cache-manager-redis-store": "^2.0.1",
+    "@types/express": "^4.17.13",
+    "@types/fluent-ffmpeg": "^2.1.21",
+    "@types/jest": "^28.1.4",
+    "@types/multer": "^1.4.7",
+    "@types/node": "^18.0.3",
+    "@types/supertest": "^2.0.12",
+    "@typescript-eslint/eslint-plugin": "^5.30.5",
+    "@typescript-eslint/parser": "^5.30.5",
+    "eslint": "^8.19.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "jest": "^26.6.3",
+    "prettier": "^2.7.1",
+    "source-map-support": "^0.5.21",
+    "supertest": "^6.3.3",
+    "ts-jest": "^26.5.6",
+    "ts-loader": "^9.3.1",
+    "ts-node": "^10.8.2",
+    "tsconfig-paths": "^4.0.0",
+    "typescript": "^4.7.4"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": ".",
+    "testRegex": ".*\\.spec\\.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "**/*.(t|j)s"
+    ],
+    "coverageDirectory": "./coverage",
+    "testEnvironment": "node",
+    "roots": [
+      "<rootDir>/apps/",
+      "<rootDir>/libs/"
+    ],
+    "moduleNameMapper": {
+      "^@app/shared(|/.*)$": "<rootDir>/libs/shared/src/$1"
+    }
+  }
+}
