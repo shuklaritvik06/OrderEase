@@ -1,6 +1,6 @@
 ## Description
 
-![nest-js-720x255](https://github.com/shuklaritvik06/order-and-gridfs/assets/72812470/e75e3005-edc9-4276-bcf3-b08551ed077a)
+![nest](https://github.com/shuklaritvik06/order-and-gridfs/assets/72812470/f96667a0-acaf-458b-a445-95a70171323b)
 
 
 - [x] Microservice Architecture
